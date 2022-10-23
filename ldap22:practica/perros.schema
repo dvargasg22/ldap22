@@ -1,0 +1,87 @@
+# perros.schema
+# ----------------
+
+## x-Perros
+# x-nombre
+# x-foto
+# x-descripcion
+# x-peligroso
+
+
+attributetype (1.1.2.1.1 
+	NAME 'x-nombre'
+	DESC 'DNI de la persona'
+ 	EQUALITY caseIgnoreMatch
+  	SUBSTR caseIgnoreSubstringsMatch
+  	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  	SINGLE-VALUE )
+  
+attributetype (1.1.2.1.2 
+	NAME 'x-foto'
+   	DESC 'Fotografia  del perrazo'
+   	SYNTAX 1.3.6.1.4.1.1466.115.121.1.28 )
+      
+attributetype (1.1.2.1.3 
+	NAME 'x-peligroso'
+  	DESC 'Saber si es peligroso o no'
+  	SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 
+	SINGLE-VALUE
+	)
+  
+attributetype ( 1.1.2.1.4 
+	NAME 'x-descripcion'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+ 	DESC 'Descripcio del perrazo'
+  	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+objectclass (1.1.2.2.1
+	NAME 'x-perros'
+	DESC 'Perros'
+   	SUP  inetOrgPerson
+   	STRUCTURAL
+   	MUST ( x-nombre $ x-descripcion )
+   	MAY  ( x-foto $ x-peligroso ) 
+	)
+
+
+
+
+### x-historia
+#
+# 
+# x-pais
+# x-edat
+# x-Document
+#
+# ---------------------------------------------------------
+
+attributetype (1.1.2.2.1 
+	NAME 'x-pais'
+	DESC 'Pais de origen'
+	EQUALITY caseIgnoreMatch
+  	SUBSTR caseIgnoreSubstringsMatch
+  	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+attributetype (1.1.2.2.2 
+	NAME 'x-edat'
+  	DESC 'Edat promedio'
+  	EQUALITY integerMatch
+  	ORDERING integerOrderingMatch
+  	SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+	SINGLE-VALUE )
+  	
+attributetype ( 1.1.2.2.3
+	NAME 'x-documentos'
+	DESC 'Documents del perri'
+  	SYNTAX 1.3.6.1.4.1.1466.115.121.1.5 )
+
+
+objectclass (1.1.2.2.2
+	NAME 'x-historia'
+   	DESC 'Historia de los perris del barrio'
+   	SUP  TOP
+   	AUXILIARY
+   	MUST x-pais 
+   	MAY ( x-edat $ x-documentos ) )
+

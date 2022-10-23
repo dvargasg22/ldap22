@@ -1,0 +1,107 @@
+dn: ou=perros,dc=edt,dc=org
+ou: perros
+description: Container por y para los perros
+objectClass: organizationalunit
+
+dn: cn=beagle,ou=perros,dc=edt,dc=org
+objectClass: x-perros
+objectClass: x-historia
+cn: beagle
+sn: biguel
+x-descripcion: el perrito mas faxa del barrio
+x-nombre: beagle
+x-pais: espanya 
+x-peligroso: FALSE 
+x-foto:< file:///opt/docker/beagle.jpg
+x-documentos:< file:///opt/docker/document.pdf
+
+dn: cn=boxer,ou=perros,dc=edt,dc=org
+objectClass: x-perros
+objectClass: x-historia
+cn: boxer
+sn: boxeador
+x-descripcion: el perrito mas mas pelea sabe
+x-nombre: boxer
+x-pais: eeuu
+x-peligroso: TRUE 
+x-foto:< file:///opt/docker/boxer.jpg
+x-documentos:< file:///opt/docker/document.pdf
+
+dn: cn=doberman,ou=perros,dc=edt,dc=org
+objectClass: x-perros
+objectClass: x-historia
+cn: doberman
+sn: mandober
+x-descripcion: el perrito mas peligroso del barrio
+x-nombre: doberman
+x-pais: alemanya 
+x-peligroso: TRUE 
+x-foto:< file:///opt/docker/doberman.jpg
+x-documentos:< file:///opt/docker/document.pdf
+
+dn: cn=mudi,ou=perros,dc=edt,dc=org
+objectClass: x-perros
+objectClass: x-historia
+cn: mudi
+sn: mudo
+x-descripcion: el perrito mas amable de las historia
+x-nombre: mudi 
+x-pais: euskadi
+x-peligroso: FALSE 
+x-foto:< file:///opt/docker/mudi.jpg
+x-documentos:< file:///opt/docker/document.pdf
+
+dn: cn=chow,ou=perros,dc=edt,dc=org
+objectClass: x-perros
+objectClass: x-historia
+cn: chow
+sn: oso
+x-descripcion: literalmente un oso
+x-nombre: chow 
+x-pais: egipto
+x-peligroso: TRUE 
+x-foto:< file:///opt/docker/chow.jpg
+x-documentos:< file:///opt/docker/document.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
